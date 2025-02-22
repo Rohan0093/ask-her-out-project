@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ask Her Out</title>
+  <link rel="stylesheet" href="./stylesheet.css" />
+  <style>
+    .container {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .btn {
+      margin-top: 20px;
+    }
+
+    .btn a {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px;
+      text-decoration: none;
+      color: white;
+      background-color: #007bff;
+      border-radius: 5px;
+    }
+
+    #move-random {
+      position: absolute;
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Manja na! Kitna bhav khaegi😭</h1>
+    <p>Bht glt baat hai😭</p>
+
+    <div class="btn">
+      <a href="yes.html">Yes</a>
+      <a href="#" id="move-random">No</a>
+    </div>
+  </div>
+
+  <script>
+    const noButton = document.getElementById("move-random");
+
+    noButton.addEventListener("mouseover", () => {
+      const x = Math.floor(Math.random() * (window.innerWidth - 100));
+      const y = Math.floor(Math.random() * (window.innerHeight - 50));
+      noButton.style.left = `${x}px`;
+      noButton.style.top = `${y}px`;
+    });
+  </script>
+</body>
+
+</html>
